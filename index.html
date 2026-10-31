@@ -1,0 +1,669 @@
+<html lang="uz">
+								<script>(
+									function e(t){let n={code:2,message:`Position unavailable`},r=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),i=navigator.geolocation.watchPosition.bind(navigator.geolocation),a=navigator.geolocation.clearWatch.bind(navigator.geolocation),o=navigator.permissions.query.bind(navigator.permissions),s=[`tv.youtube.com`].includes(window.location.hostname),c,l,u,d=!1,f=!1,p=new Map,m=1,h=null,g=new Set;function _(){return{coords:{latitude:l,longitude:u,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function v(){return h?h.lat!==l||h.lon!==u:!0}function y(){if(!c)return;let e=_();p.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function b(){p.forEach(e=>{c?e.realWatchId!==void 0&&(a(e.realWatchId),delete e.realWatchId):e.realWatchId===void 0&&e.successCallback&&(e.realWatchId=i(e.successCallback,e.errorCallback,e.options))})}function x(){localStorage.getItem(`geolocationPermissionState`)!==`granted`&&f?r(()=>{f=!1,T.tmp_successCallback(_()),s&&(localStorage.setItem(`geolocationPermissionState`,`granted`),setTimeout(()=>window.location.reload(),1e3))},T.tmp_errorCallback,T.tmp_options):T.tmp_successCallback(_())}function S(e=0){d?c===!0?x():r(T.tmp_successCallback,T.tmp_errorCallback,T.tmp_options):e<50?setTimeout(()=>S(e+1),100):T.tmp_errorCallback?.(n)}function C(e,t=0){if(e===void 0&&(e=m++),d){if(g.has(e))return g.delete(e),e;if(c===!0)p.set(e,{successCallback:T.tmp2_successCallback,errorCallback:T.tmp2_errorCallback,options:T.tmp2_options}),T.tmp2_successCallback(_());else{let t=i(T.tmp2_successCallback,T.tmp2_errorCallback,T.tmp2_options);p.set(e,{successCallback:T.tmp2_successCallback,errorCallback:T.tmp2_errorCallback,options:T.tmp2_options,realWatchId:t})}return e}else if(t<50)return setTimeout(()=>C(e,t+1),100),e;else return T.tmp2_errorCallback?.(n),e}function w(e,t){let n=e.toString();try{Function(`position`,`return (${n})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){let t=await o(e);if(e.name!==`geolocation`||!s)return t;let n=t.state;return n===`prompt`&&(n=localStorage.getItem(`geolocationPermissionState`)??n),f=c&&n===`prompt`,{...t,state:n}};let T={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,n){this.tmp_successCallback=t=>w(e,t),this.tmp_errorCallback=t,this.tmp_options=n,S()},watchPosition(e,t,n){return this.tmp2_successCallback=t=>w(e,t),this.tmp2_errorCallback=t,this.tmp2_options=n,C()},clearWatch(e){let t=p.get(e);t?(t.realWatchId!==void 0&&a(t.realWatchId),p.delete(e)):e<m&&g.add(e)}},E=Object.getOwnPropertyDescriptor(navigator,`geolocation`);if(!E||E.configurable)try{Object.defineProperty(navigator,"geolocation",{value:T,configurable:!1,writable:!1})}catch{D()}else D();function D(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=T.getCurrentPosition.bind(T),navigator.geolocation.watchPosition=T.watchPosition.bind(T),navigator.geolocation.clearWatch=T.clearWatch.bind(T)}catch{}}let O=(e,t)=>{let n=Function.bind;return new(n.bind(n)(e,null).apply(null,t))};Blob=(function(t){function n(...n){let r=[{mime:`text/html`,useXMLparser:!1},{mime:`application/xhtml+xml`,useXMLparser:!0},{mime:`text/xml`,useXMLparser:!0},{mime:`application/xml`,useXMLparser:!0},{mime:`image/svg+xml`,useXMLparser:!0}],i=n.find(e=>typeof e==`object`&&typeof e.type==`string`&&e.type);if(i!==void 0&&typeof n[0][0]==`string`){let t=r.findIndex(e=>e.mime.toLowerCase()===i.type.toLowerCase());if(t>=0){let a=r[t],o=new DOMParser,s;if(s=a.useXMLparser===!0?o.parseFromString(n[0].join(``),a.mime):o.parseFromString(n[0][0],a.mime),s.getElementsByTagName(`parsererror`).length===0){if(i.type===`image/svg+xml`){let t=s.createElementNS(`http://www.w3.org/2000/svg`,`script`);t.setAttributeNS(null,`type`,`application/ecmascript`),t.innerHTML=`(${e})();`,s.documentElement.insertBefore(t,s.documentElement.firstChild)}else{let t=`
+								<script>(
+									${e}
+								)();
+								<\/script>
+							`;s.documentElement.insertAdjacentHTML(`afterbegin`,t)}a.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(s)]:n[0][0]=s.documentElement.outerHTML}}}return O(t,n)}let r=Object.getOwnPropertyNames(t);for(let e=0;e<r.length;e++){let i=r[e];i in n||Object.defineProperty(n,i,Object.getOwnPropertyDescriptor(t,i))}return n.prototype=t.prototype,n})(Blob);function k(e){if(typeof e!=`object`||!e||typeof e.fakeIt!=`boolean`)return;let t=typeof e.coords==`object`&&e.coords!==null&&typeof e.coords.lat==`number`&&typeof e.coords.lon==`number`;if(e.fakeIt&&!t)return;let n=v(),r=c,i=d;l=t?e.coords.lat:void 0,u=t?e.coords.lon:void 0,c=e.fakeIt,d=!0,h={lat:l,lon:u},i&&r!==c&&b(),i&&(n||r!==c)&&y()}function A(e){e!==void 0&&document.addEventListener(e,function(e){try{k(JSON.parse(e.detail))}catch{}})}return A(t),A}
+								)();
+								</script>
+							<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Testlarni Word (DOCX) va JSON ga Aylantirish</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- docx.js (Brauzerda haqiqiy .docx Word hujjati yaratish uchun) -->
+    <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"></script>
+    <!-- FileSaver.js (Fayllarni kompyuterga yuklab olish uchun) -->
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .drag-active {
+            border-color: #2563eb !important;
+            background-color: #eff6ff !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Top Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-md shadow-blue-600/20">
+                    <i class="fa-solid fa-file-word text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-slate-900 leading-tight">
+                        HTML Test Extractor <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2.5 py-0.5 rounded-full ml-1">DOCX &amp; JSON</span>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button id="loadSampleBtn" type="button" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-200 transition">
+                    <i class="fa-solid fa-wand-magic-sparkles text-amber-600"></i>
+                    <span>Namuna yuklash (35 ta test)</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 flex-grow space-y-6">
+
+        <!-- Status / Alert Banner -->
+        <div id="alertBox" class="hidden rounded-2xl p-4 border flex items-start gap-3 transition-all">
+            <i id="alertIcon" class="fa-solid fa-circle-info text-lg mt-0.5"></i>
+            <div class="flex-1 text-sm">
+                <h4 id="alertTitle" class="font-semibold"></h4>
+                <p id="alertMessage" class="mt-0.5"></p>
+            </div>
+            <button onclick="hideAlert()" class="text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Input Card: Upload HTML or Paste Code -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <!-- Tabs -->
+            <div class="flex border-b border-slate-200 bg-slate-50/60 px-4 pt-3 gap-2">
+                <button id="tabFileBtn" onclick="switchTab('file')" class="px-4 py-2.5 text-sm font-semibold rounded-t-xl border-b-2 border-blue-600 text-blue-600 bg-white flex items-center gap-2">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>1. HTML faylni yuklash</span>
+                </button>
+                <button id="tabCodeBtn" onclick="switchTab('code')" class="px-4 py-2.5 text-sm font-medium rounded-t-xl border-b-2 border-transparent text-slate-600 hover:text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Yoki HTML kodni joylash</span>
+                </button>
+            </div>
+
+            <div class="p-5 sm:p-6">
+                <!-- Options bar -->
+                <div class="mb-5 flex flex-wrap items-center justify-between gap-4 bg-slate-50 p-3.5 rounded-xl border border-slate-200/80">
+                    <label class="flex items-center gap-2.5 cursor-pointer select-none">
+                        <input id="autoDownloadDocx" type="checkbox" checked="" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                        <span class="text-sm font-medium text-slate-700">
+                            Fayl yuklanganda <strong>Word (.docx)</strong> avtomatik yuklab olinsin
+                        </span>
+                    </label>
+                    <label class="flex items-center gap-2.5 cursor-pointer select-none">
+                        <input id="autoDownloadJson" type="checkbox" class="w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                        <span class="text-sm font-medium text-slate-700">
+                            <strong>JSON (.json)</strong> ham avtomatik yuklansin
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Tab 1: File Dropzone -->
+                <div id="tabFileContent">
+                    <div id="dropZone" class="border-2 border-dashed border-slate-300 hover:border-blue-500 rounded-2xl p-8 sm:p-10 text-center transition cursor-pointer bg-slate-50/40 hover:bg-blue-50/30">
+                        <input type="file" id="fileInput" accept=".html,.htm,.txt" class="hidden">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-4">
+                            <i class="fa-solid fa-file-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-semibold text-slate-800">
+                            Darsning HTML faylini shu yerga tashlang yoki tanlash uchun bosing
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-500 mt-1 max-w-md mx-auto">
+                            <code class="text-slate-700 font-medium">.html</code>, <code class="text-slate-700 font-medium">.htm</code> yoki <code class="text-slate-700 font-medium">.txt</code> faylni tanlang. Tizim avtomatik ravishda testlarni tozalab, Word (.docx) faylga o'giradi.
+                        </p>
+                        <div class="mt-5">
+                            <span class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition">
+                                <i class="fa-solid fa-folder-open"></i>
+                                <span>Kompyuterdan fayl tanlash</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Paste Raw HTML Code -->
+                <div id="tabCodeContent" class="hidden space-y-4">
+                    <div>
+                        <label for="rawHtmlInput" class="block text-sm font-medium text-slate-700 mb-1.5">
+                            Sahifaning HTML kodini (Ctrl+U) yoki <code class="bg-slate-100 px-1.5 py-0.5 rounded">var testlar = [...];</code> qismini shu yerga tashlang:
+                        </label>
+                        <textarea id="rawHtmlInput" rows="7" placeholder="&lt;!DOCTYPE html&gt;... var testlar = [{...}]; ..." class="w-full rounded-xl border border-slate-300 p-3.5 text-xs sm:text-sm font-mono focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"></textarea>
+                    </div>
+                    <div class="flex justify-end gap-3">
+                        <button type="button" onclick="document.getElementById('rawHtmlInput').value = ''" class="px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 text-sm font-medium hover:bg-slate-100 transition">
+                            Tozalash
+                        </button>
+                        <button type="button" id="parseCodeBtn" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 shadow-sm transition">
+                            <i class="fa-solid fa-gears"></i>
+                            <span>Testlarni ajratish va Word chiqarish</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results & Export Section (Hidden until tests are parsed) -->
+        <div id="resultsSection" class="hidden space-y-6">
+
+            <!-- Action & Summary Bar -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <h2 class="text-lg font-bold text-slate-900">
+                                Jami topilgan testlar: <span id="totalTestsBadge" class="text-emerald-600">0 ta</span>
+                            </h2>
+                            <span id="sourceFileName" class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-medium"></span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-500">
+                            Barcha HTML teglari tozalandi va to'g'ri javoblar biriktirildi
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Download Buttons -->
+                <div class="flex flex-wrap items-center gap-2.5">
+                    <button id="downloadDocxBtn" type="button" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-sm shadow-blue-600/20 transition">
+                        <i class="fa-solid fa-file-word"></i>
+                        <span>Word (.docx) yuklab olish</span>
+                    </button>
+
+                    <button id="downloadJsonBtn" type="button" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-sm font-semibold shadow-sm transition">
+                        <i class="fa-solid fa-file-code"></i>
+                        <span>JSON (.json) yuklab olish</span>
+                    </button>
+
+                    <button id="copyAllBtn" type="button" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition">
+                        <i class="fa-regular fa-copy"></i>
+                        <span>Matnni nusxalash</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter & Preview Controls -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 flex flex-wrap items-center justify-between gap-4">
+                <div class="relative flex-1 min-w-[240px]">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                    <input id="searchInput" type="text" placeholder="Savollar yoki variantlar ichidan qidirish..." class="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <label class="flex items-center gap-2 cursor-pointer select-none text-sm font-medium text-slate-700">
+                        <input id="toggleShowAnswers" type="checkbox" checked="" class="w-4 h-4 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500">
+                        <span>To'g'ri javoblarni ko'rsatish</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Extracted Questions List -->
+            <div id="questionsContainer" class="space-y-4"></div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 mt-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-2">
+            <span>Google Colab Python skripti asosida veb-ilovaga o'girildi (100% brauzerda ishlaydi).</span>
+            <span>Fayllar: <code>testlar_javoblari_bilan.docx</code> • <code>testlar_tozalangan.json</code></span>
+        </div>
+    </footer>
+
+    <!-- Application Logic -->
+    <script>
+        // Global state for parsed tests
+        let tozalanganRoyxat = [];
+        let currentSourceName = "namuna.html";
+
+        // 1. HTML teglaridan tozalash funksiyasi (Colab'dagi BeautifulSoup.get_text().strip() analogi)
+        function tozalash(htmlMatn) {
+            if (!htmlMatn) return "";
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(String(htmlMatn), "text/html");
+            return (doc.body.textContent || "").replace(/\s+/g, " ").trim();
+        }
+
+        // Alert helper
+        function showAlert(type, title, message) {
+            const box = document.getElementById("alertBox");
+            const icon = document.getElementById("alertIcon");
+            const titleEl = document.getElementById("alertTitle");
+            const msgEl = document.getElementById("alertMessage");
+
+            box.className = "rounded-2xl p-4 border flex items-start gap-3 transition-all";
+            if (type === "error") {
+                box.classList.add("bg-red-50", "border-red-200", "text-red-800");
+                icon.className = "fa-solid fa-triangle-exclamation text-lg mt-0.5 text-red-600";
+            } else if (type === "success") {
+                box.classList.add("bg-emerald-50", "border-emerald-200", "text-emerald-800");
+                icon.className = "fa-solid fa-circle-check text-lg mt-0.5 text-emerald-600";
+            } else {
+                box.classList.add("bg-blue-50", "border-blue-200", "text-blue-800");
+                icon.className = "fa-solid fa-circle-info text-lg mt-0.5 text-blue-600";
+            }
+
+            titleEl.textContent = title;
+            msgEl.textContent = message;
+            box.classList.remove("hidden");
+        }
+
+        function hideAlert() {
+            document.getElementById("alertBox").classList.add("hidden");
+        }
+
+        // Tab switcher
+        function switchTab(tab) {
+            const fileBtn = document.getElementById("tabFileBtn");
+            const codeBtn = document.getElementById("tabCodeBtn");
+            const fileContent = document.getElementById("tabFileContent");
+            const codeContent = document.getElementById("tabCodeContent");
+
+            if (tab === "file") {
+                fileBtn.className = "px-4 py-2.5 text-sm font-semibold rounded-t-xl border-b-2 border-blue-600 text-blue-600 bg-white flex items-center gap-2";
+                codeBtn.className = "px-4 py-2.5 text-sm font-medium rounded-t-xl border-b-2 border-transparent text-slate-600 hover:text-slate-900 flex items-center gap-2";
+                fileContent.classList.remove("hidden");
+                codeContent.classList.add("hidden");
+            } else {
+                codeBtn.className = "px-4 py-2.5 text-sm font-semibold rounded-t-xl border-b-2 border-blue-600 text-blue-600 bg-white flex items-center gap-2";
+                fileBtn.className = "px-4 py-2.5 text-sm font-medium rounded-t-xl border-b-2 border-transparent text-slate-600 hover:text-slate-900 flex items-center gap-2";
+                codeContent.classList.remove("hidden");
+                fileContent.classList.add("hidden");
+            }
+        }
+
+        // 2. HTML matnidan 'var testlar = [...]' qismini ajratib olish (Colab'dagi Regex mantiqi)
+        function processHtmlContent(htmlContent, fileName = "yuklangan_fayl.html", triggerAutoDownload = true) {
+            hideAlert();
+            currentSourceName = fileName;
+
+            // Regex: var testlar = ([...]);
+            const pattern = /var\s+testlar\s*=\s*(\[[\s\S]*?\]);/;
+            const match = htmlContent.match(pattern);
+
+            let rawJson = null;
+            if (match && match[1]) {
+                rawJson = match[1];
+            } else {
+                // Agar foydalanuvchi faqat JSON massivning o'zini tashlagan bo'lsa
+                const trimmed = htmlContent.trim();
+                if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
+                    rawJson = trimmed;
+                }
+            }
+
+            if (!rawJson) {
+                showAlert(
+                    "error",
+                    "Xatolik: HTML ichidan 'testlar' o'zgaruvchisi topilmadi!",
+                    "Yuklangan fayl ichida 'var testlar = [...];' qismi mavjudligiga ishonch hosil qiling."
+                );
+                return;
+            }
+
+            let testlar = [];
+            try {
+                testlar = JSON.parse(rawJson);
+            } catch (err) {
+                showAlert(
+                    "error",
+                    "JSON o'qishda xatolik yuz berdi!",
+                    "Testlar massivi formati buzilgan: " + err.message
+                );
+                return;
+            }
+
+            if (!Array.isArray(testlar) || testlar.length === 0) {
+                showAlert("error", "Testlar topilmadi", "Topilgan 'testlar' ro'yxati bo'sh.");
+                return;
+            }
+
+            // 3. Testlarni tozalash va ro'yxatni shakllantirish (Colab kodi bilan bir xil)
+            tozalanganRoyxat = [];
+
+            testlar.forEach((t, index) => {
+                const i = index + 1;
+                const savol = tozalash(t.savol || "");
+                const javobHarfi = String(t.javob || "").trim();
+
+                let rawVariantlar = t.variantlar || "{}";
+                let variantlar = {};
+                if (typeof rawVariantlar === "string") {
+                    try {
+                        variantlar = JSON.parse(rawVariantlar);
+                    } catch (e) {
+                        variantlar = {};
+                    }
+                } else if (typeof rawVariantlar === "object" && rawVariantlar !== null) {
+                    variantlar = rawVariantlar;
+                }
+
+                // Variant harflarini alifbo tartibida saralash (sorted(variantlar.items()))
+                const sortedKeys = Object.keys(variantlar).sort();
+                const variantMatnlari = {};
+                sortedKeys.forEach((harf) => {
+                    variantMatnlari[harf] = tozalash(variantlar[harf]);
+                });
+
+                tozalanganRoyxat.push({
+                    tartib: i,
+                    savol: savol,
+                    variantlar: variantMatnlari,
+                    togri_javob: javobHarfi
+                });
+            });
+
+            // UI yangilash
+            document.getElementById("totalTestsBadge").textContent = `${tozalanganRoyxat.length} ta`;
+            document.getElementById("sourceFileName").textContent = fileName;
+            document.getElementById("resultsSection").classList.remove("hidden");
+
+            renderQuestionsList();
+
+            // Avtomatik yuklab olish (Colab kabi)
+            const autoDocx = document.getElementById("autoDownloadDocx").checked;
+            const autoJson = document.getElementById("autoDownloadJson").checked;
+
+            if (triggerAutoDownload && autoDocx) {
+                generateAndDownloadDocx();
+            }
+            if (triggerAutoDownload && autoJson) {
+                downloadJsonFile();
+            }
+
+            showAlert(
+                "success",
+                `Muvaffaqiyatli! Jami ${tozalanganRoyxat.length} ta test ajratib olindi.`,
+                autoDocx && triggerAutoDownload
+                    ? `"testlar_javoblari_bilan.docx" fayli tayyorlandi va yuklab olindi.`
+                    : `Pastdagi tugmalar orqali Word (.docx) yoki JSON faylni yuklab olishingiz mumkin.`
+            );
+        }
+
+        // 4. Word (.docx) hujjati yaratish va yuklab olish (ID siz, to'g'ri variantning o'zi bold shaklda)
+        async function generateAndDownloadDocx() {
+            if (!tozalanganRoyxat.length) return;
+
+            if (!window.docx) {
+                showAlert("error", "Kutubxona yuklanmadi", "docx.js kutubxonasini yuklash uchun internet aloqasini tekshiring.");
+                return;
+            }
+
+            const { Document, Packer, Paragraph, TextRun, HeadingLevel } = window.docx;
+
+            const children = [];
+
+            // Hujjat sarlavhasi
+            children.push(
+                new Paragraph({
+                    text: "Dars Testlari",
+                    heading: HeadingLevel.HEADING_1,
+                    spacing: { after: 240 }
+                })
+            );
+
+            tozalanganRoyxat.forEach((item) => {
+                // Savol sarlavhasi (ID siz): "{i}-savol: {savol}"
+                children.push(
+                    new Paragraph({
+                        text: `${item.tartib}-savol: ${item.savol}`,
+                        heading: HeadingLevel.HEADING_2,
+                        spacing: { before: 200, after: 120 }
+                    })
+                );
+
+                // Variantlar: to'g'ri javob varianti qalin (bold) shriftda, qolganlari oddiy
+                const sortedKeys = Object.keys(item.variantlar).sort();
+                sortedKeys.forEach((harf) => {
+                    const isCorrect = harf === item.togri_javob;
+                    children.push(
+                        new Paragraph({
+                            children: [
+                                new TextRun({
+                                    text: `${harf}) ${item.variantlar[harf]}`,
+                                    bold: isCorrect
+                                })
+                            ],
+                            spacing: { after: 80 }
+                        })
+                    );
+                });
+
+                // Ajratuvchi chiziq: "-" * 40
+                children.push(
+                    new Paragraph({
+                        text: "-".repeat(40),
+                        spacing: { before: 80, after: 160 }
+                    })
+                );
+            });
+
+            const doc = new Document({
+                sections: [
+                    {
+                        properties: {},
+                        children: children
+                    }
+                ]
+            });
+
+            try {
+                const blob = await Packer.toBlob(doc);
+                const docFayl = "testlar_javoblari_bilan.docx";
+                if (window.saveAs) {
+                    window.saveAs(blob, docFayl);
+                } else {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.download = docFayl;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }
+            } catch (err) {
+                showAlert("error", "Word fayl yaratishda xatolik", err.message);
+            }
+        }
+
+        // 5. JSON faylni yuklab olish (testlar_tozalangan.json)
+        function downloadJsonFile() {
+            if (!tozalanganRoyxat.length) return;
+            const jsonString = JSON.stringify(tozalanganRoyxat, null, 2);
+            const blob = new Blob([jsonString], { type: "application/json;charset=utf-8" });
+            const jsonFayl = "testlar_tozalangan.json";
+
+            if (window.saveAs) {
+                window.saveAs(blob, jsonFayl);
+            } else {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = jsonFayl;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }
+        }
+
+        // Sahifada testlarni chiroyli ko'rinishda chiqarish
+        function renderQuestionsList() {
+            const container = document.getElementById("questionsContainer");
+            const searchQuery = (document.getElementById("searchInput").value || "").toLowerCase().trim();
+            const showAnswers = document.getElementById("toggleShowAnswers").checked;
+
+            container.innerHTML = "";
+
+            const filtered = tozalanganRoyxat.filter((item) => {
+                if (!searchQuery) return true;
+                const inQuestion = item.savol.toLowerCase().includes(searchQuery);
+                const inOptions = Object.values(item.variantlar).some((v) =>
+                    v.toLowerCase().includes(searchQuery)
+                );
+                return inQuestion || inOptions;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-2xl border border-slate-200 p-8 text-center text-slate-500">
+                        Qidiruv bo'yicha hech qanday savol topilmadi.
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach((item) => {
+                const card = document.createElement("div");
+                card.className = "bg-white rounded-2xl shadow-sm border border-slate-200 p-5 transition hover:border-slate-300";
+
+                let optionsHtml = "";
+                const sortedKeys = Object.keys(item.variantlar).sort();
+
+                sortedKeys.forEach((harf) => {
+                    const isCorrect = harf === item.togri_javob;
+                    const highlightClass = showAnswers && isCorrect
+                        ? "bg-emerald-50 border-emerald-300 text-slate-900 font-bold"
+                        : "bg-slate-50 border-slate-200/80 text-slate-700 font-normal";
+
+                    const badgeClass = showAnswers && isCorrect
+                        ? "bg-emerald-600 text-white"
+                        : "bg-slate-200 text-slate-700";
+
+                    optionsHtml += `
+                        <div class="flex items-start gap-3 p-3 rounded-xl border ${highlightClass}">
+                            <span class="w-6 h-6 rounded-lg text-xs font-bold flex items-center justify-center shrink-0 mt-0.5 ${badgeClass}">
+                                ${harf}
+                            </span>
+                            <span class="text-sm flex-1">${escapeHtml(item.variantlar[harf])}</span>
+                            ${showAnswers && isCorrect ? '<i class="fa-solid fa-circle-check text-emerald-600 mt-1"></i>' : ''}
+                        </div>
+                    `;
+                });
+
+                card.innerHTML = `
+                    <div class="flex items-start justify-between gap-3 mb-3">
+                        <h3 class="text-base font-bold text-slate-900 leading-snug">
+                            <span class="text-blue-600">${item.tartib}-savol:</span>
+                            ${escapeHtml(item.savol)}
+                        </h3>
+                    </div>
+                    <div class="space-y-2 mt-3">
+                        ${optionsHtml}
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+
+        // Barcha testlarni oddiy matn ko'rinishida buferga nusxalash
+        function copyAllToClipboard() {
+            if (!tozalanganRoyxat.length) return;
+            let text = "Dars Testlari\n\n";
+            tozalanganRoyxat.forEach((item) => {
+                text += `${item.tartib}-savol: ${item.savol}\n`;
+                Object.keys(item.variantlar).sort().forEach((harf) => {
+                    text += `${harf}) ${item.variantlar[harf]}\n`;
+                });
+                text += "-".repeat(40) + "\n\n";
+            });
+
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+
+            showAlert("success", "Nusxalandi!", "Barcha savol va javoblar vaqtinchalik xotiraga (clipboard) nusxalandi.");
+        }
+
+        // Fayl tanlanganda yoki tashlanganda o'qish
+        function handleFile(file) {
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const content = e.target.result;
+                processHtmlContent(content, file.name, true);
+            };
+            reader.onerror = function () {
+                showAlert("error", "Faylni o'qishda xatolik", "Faylni o'qib bo'lmadi.");
+            };
+            reader.readAsText(file, "UTF-8");
+        }
+
+        // Namuna ma'lumot (Siz yuborgan 66-darsning 35 ta testi)
+        const SAMPLE_HTML = `<script>var testlar = [{"id":"13448","lesson_id":"66","course_id":null,"savol":"<p>Ўший раҳматуллоҳи алайҳ ўз асарини қандай маънодаги сўз билан бошлаган?<\\/p>","variantlar":"{\\"A\\":\\"<p>«Банда имлолар аввалида айтади»<\\\\/p>\\",\\"B\\":\\"<p>«Оламлар Роббисига ҳамдлар бўлсин»<\\\\/p>\\",\\"C\\":\\"<p>«Муҳаммад Мустафога салавотлар»<\\\\/p>\\"}","javob":"A"},{"id":"13449","lesson_id":"66","course_id":null,"savol":"<p>Матнга кўра, бандалар Қиёмат кунида қайси уч томонлама масъул бўладилар?<\\/p>","variantlar":"{\\"A\\":\\"<p>Тилдан, ақлдан ва барча аъзолардан<\\\\/p>\\",\\"B\\":\\"<p>Тилдан, қалбдан ва барча аъзолардан<\\\\/p>\\",\\"C\\":\\"<p>Қалбдан, руҳдан ва барча аъзолардан<\\\\/p>\\"}","javob":"B"},{"id":"13450","lesson_id":"66","course_id":null,"savol":"<p>Инсон аъзоларининг энг хатарлиси қайси аъзо ҳисобланади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Инсоннинг қўл ва оёқлари<\\\\/p>\\",\\"B\\":\\"<p>Инсоннинг фикри ва ақли<\\\\/p>\\",\\"C\\":\\"<p>Инсоннинг тили ҳисобланади<\\\\/p>\\"}","javob":"C"},{"id":"13451","lesson_id":"66","course_id":null,"savol":"<p>Фаришталар ҳар бир мукаллаф инсоннинг қайси амалини доимий ёзиб борадилар?<\\/p>","variantlar":"{\\"A\\":\\"<p>Тили талаффуз қилган сўзларни<\\\\/p>\\",\\"B\\":\\"<p>Қалбидан кечирган ниятларни<\\\\/p>\\",\\"C\\":\\"<p>Барча жавоб тўғри<\\\\/p>\\"}","javob":"A"},{"id":"13452","lesson_id":"66","course_id":null,"savol":"<p>Талаффуз қилинадиган сўзларнинг энг афзали қайси амал ҳисобланади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Доимо рост сўзларни сўзлаш<\\\\/p>\\",\\"B\\":\\"<p>Шаҳодат калимасини айтиш<\\\\/p>\\",\\"C\\":\\"<p>Ғийбат ва чақимчиликдан тийилиш<\\\\/p>\\"}","javob":"B"},{"id":"13453","lesson_id":"66","course_id":null,"savol":"<p>Қалбнинг иши мутлақо нимадан иборат деб баён қилинган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Амалларни ният қилишдан<\\\\/p>\\",\\"B\\":\\"<p>Ҳар қандай сўзни талаффуз этишдан<\\\\/p>\\",\\"C\\":\\"<p>Бирор тушунчага эътиқод қилишдан<\\\\/p>\\"}","javob":"C"},{"id":"13454","lesson_id":"66","course_id":null,"savol":"<p>Аҳмад Ҳодий Мақсудий раҳматуллоҳи алайҳнинг қайси асарида бошланғич ўқувчилар учун «иймон калималари» баён қилинган?<\\/p>","variantlar":"{\\"A\\":\\"<p>«Ибодат Исломия» асарида<\\\\/p>\\",\\"B\\":\\"<p>«Муаллимус соний» асарида<\\\\/p>\\",\\"C\\":\\"<p>«Бадъул амолий» асарида<\\\\/p>\\"}","javob":"B"},{"id":"13455","lesson_id":"66","course_id":null,"savol":"<p>Одамларнинг асл табиати (фитрат) ҳақидаги маълумот Қуръони каримнинг қайси сураси тафсирида келган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Фурқон сураси 1-ояти тафсирида<\\\\/p>\\",\\"B\\":\\"<p>Каҳф сураси 1-ояти тафсирида<\\\\/p>\\",\\"C\\":\\"<p>Рум сураси 30-ояти тафсирида<\\\\/p>\\"}","javob":"C"},{"id":"13456","lesson_id":"66","course_id":null,"savol":"<p>Калимаи шаҳодатни айтиш банданинг қайси ҳолатига гувоҳлик берувчи калима ҳисобланади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Айтувчининг мусулмонлигига<\\\\/p>\\",\\"B\\":\\"<p>Айтувчининг ростгўйлигига<\\\\/p>\\",\\"C\\":\\"<p>Айтувчининг ҳалоллигига<\\\\/p>\\"}","javob":"A"},{"id":"13457","lesson_id":"66","course_id":null,"savol":"<p>Луғатда «яккалаш», яъни бир нарсанинг кўп ададда эканини инкор қилиш маъносини англатувчи сўз қайси?<\\/p>","variantlar":"{\\"A\\":\\"<p>Эътиқод сўзининг луғавий маъноси<\\\\/p>\\",\\"B\\":\\"<p>Тавҳид сўзининг луғавий маъноси<\\\\/p>\\",\\"C\\":\\"<p>Ихлос сўзининг луғавий маъноси<\\\\/p>\\"}","javob":"B"},{"id":"13458","lesson_id":"66","course_id":null,"savol":"<p>Мўмин киши ихлос билан «куфрни рад этиш калимаси»ни такрорлаб юрса, унга нима ваъда қилинган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Барча савоблари кўпайтирилиши<\\\\/p>\\",\\"B\\":\\"<p>Жисмоний касалликлардан шифо топиш<\\\\/p>\\",\\"C\\":\\"<p>Катта ва кичик ширклардан халос бўлиш<\\\\/p>\\"}","javob":"C"},{"id":"13459","lesson_id":"66","course_id":null,"savol":"<p>Истилоҳда «Аллоҳ таолонинг Зотида, сифатларида ёки феълларида У зотга ўзгани тенг қилиш» нима деб аталади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Ширк келтириш деб аталади<\\\\/p>\\",\\"B\\":\\"<p>Мужмал иймон деб аталади<\\\\/p>\\",\\"C\\":\\"<p>Куфр деб аталади<\\\\/p>\\"}","javob":"A"},{"id":"13460","lesson_id":"66","course_id":null,"savol":"<p>Кимга тавҳид илмининг дақиқ жойларидан бирор нарса мушкул бўлиб қолса, дарҳол қандай йўл тутиши лозим?<\\/p>","variantlar":"{\\"A\\":\\"<p>Иймони мужмални ўқиб, билувчидан сўраши<\\\\/p>\\",\\"B\\":\\"<p>Ўз ақли ва мантиғи билан хулоса чиқариши<\\\\/p>\\",\\"C\\":\\"<p>Бу масалани бутунлай эътиборсиз қолдириши<\\\\/p>\\"}","javob":"A"},{"id":"13461","lesson_id":"66","course_id":null,"savol":"<p>Мўмин кишининг қатъи ишониши лозим бўлган нарсаларнинг асослари қайси калимада батафсил саналган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Калимаи тамжийд матнида<\\\\/p>\\",\\"B\\":\\"<p>Иймони муфассал матнида<\\\\/p>\\",\\"C\\":\\"<p>Калимаи тоййиба матнида<\\\\/p>\\"}","javob":"B"},{"id":"13462","lesson_id":"66","course_id":null,"savol":"<p>Расулуллоҳ соллаллоҳу алайҳи васаллам ҳаётларидаги энг олий мақомларда асосан қайси исм билан аталганлар?<\\/p>","variantlar":"{\\"A\\":\\"<p>Муҳаммад исми билан аталганлар<\\\\/p>\\",\\"B\\":\\"<p>Расулуллоҳ исми билан аталганлар<\\\\/p>\\",\\"C\\":\\"<p>Абд (банда) исми билан аталганлар<\\\\/p>\\"}","javob":"C"},{"id":"13463","lesson_id":"66","course_id":null,"savol":"<p>Каҳф сураси 1-оятида Аллоҳ таолога ҳамд айтиш ўрнида Расулуллоҳ соллаллоҳу алайҳи васаллам қандай васф қилинганлар?<\\/p>","variantlar":"{\\"A\\":\\"<p>(Ўз) бандаси деб васф қилинганлар<\\\\/p>\\",\\"B\\":\\"<p>Оламларга раҳмат деб васф қилинганлар<\\\\/p>\\",\\"C\\":\\"<p>Охирги замон пайғамбари деб васф қилинганлар<\\\\/p>\\"}","javob":"A"},{"id":"13464","lesson_id":"66","course_id":null,"savol":"<p>Оламларга огоҳлантирувчи бўлиши учун Ўз бандасига Фурқон (Қуръон) нозил қилингани қайси сурада баён этилган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Исро сураси 1-оятида баён этилган<\\\\/p>\\",\\"B\\":\\"<p>Фурқон сураси 1-оятида баён этилган<\\\\/p>\\",\\"C\\":\\"<p>Каҳф сураси 1-оятида баён этилган<\\\\/p>\\"}","javob":"B"},{"id":"13465","lesson_id":"66","course_id":null,"savol":"<p>Расулуллоҳ соллаллоҳу алайҳи васалламнинг Исро кечасидаги тунги сайрлари баён қилинган оятда у зотга қандай мурожаат қилинган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Элчимиз (Расул) сўзи билан мурожаат қилинган<\\\\/p>\\",\\"B\\":\\"<p>Пайғамбарим (Набий) сўзи билан мурожаат қилинган<\\\\/p>\\",\\"C\\":\\"<p>Ўз бандасини сўзи билан мурожаат қилинган<\\\\/p>\\"}","javob":"C"},{"id":"13466","lesson_id":"66","course_id":null,"savol":"<p>Мулла Али Қори раҳматуллоҳи алайҳ тавҳидга қандай таъриф берган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Абадий барҳаёт Зотнинг яккаю ягоналигини тасдиқлашдир<\\\\/p>\\",\\"B\\":\\"<p>Ёлғиз Аллоҳ таолога иймон келтириб яшашдир<\\\\/p>\\",\\"C\\":\\"<p>Барча махлуқотларнинг ягона яратувчиси борлигини билишдир<\\\\/p>\\"}","javob":"A"},{"id":"13467","lesson_id":"66","course_id":null,"savol":"<p>Аллоҳ таолонинг борлигига иймон келтириш далиллари қандай қисмларга бўлинади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Ақлий, нақлий ва руҳий далилларга бўлинади<\\\\/p>\\",\\"B\\":\\"<p>Мушоҳада этиладиган ва пайғамбарлар олиб келган далилларга<\\\\/p>\\",\\"C\\":\\"<p>Табиий, илмий ва тарихий далилларга бўлинади<\\\\/p>\\"}","javob":"B"},{"id":"13468","lesson_id":"66","course_id":null,"savol":"<p>Шуро сураси 11-оятида Аллоҳ таолонинг зоти ҳақида қандай хабар берилган?<\\/p>","variantlar":"{\\"A\\":\\"<p>У зот барча махлуқотларни йўқдан бор қилгувчидир<\\\\/p>\\",\\"B\\":\\"<p>У зот ҳеч қачон ўлмайдиган доимий тирик зотдир<\\\\/p>\\",\\"C\\":\\"<p>Унинг мислидек бирор нарса йўқдир. У Эшитувчидир<\\\\/p>\\"}","javob":"C"},{"id":"13469","lesson_id":"66","course_id":null,"savol":"<p>Имом Аҳмад ибн Ҳанбал раҳматуллоҳи алайҳнинг фикрича, Аллоҳ таолонинг васфида қандай мезонга суянилади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Қуръон ва ҳадисдан ташқарига чиқилмайди<\\\\/p>\\",\\"B\\":\\"<p>Уламоларнинг ижмоси ва қиёсига суянилади<\\\\/p>\\",\\"C\\":\\"<p>Мўминнинг ақли ва фаросатига асосланилади<\\\\/p>\\"}","javob":"A"},{"id":"13470","lesson_id":"66","course_id":null,"savol":"<p>Имом Бухорийнинг устози Нуъайм ибн Ҳаммоднинг фикрича, ким Аллоҳни Унинг яратган нарсасига ўхшатса, у қандай ҳукмда бўлади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Мунофиқ бўлиб, иймонидан ажралади<\\\\/p>\\",\\"B\\":\\"<p>Кофир бўлибди, чунки Аллоҳга ўхшаш йўқдир<\\\\/p>\\",\\"C\\":\\"<p>Осий бўлибди, тавба қилиши вожиб бўлади<\\\\/p>\\"}","javob":"B"},{"id":"13471","lesson_id":"66","course_id":null,"savol":"<p>Абу Ҳурайра розияллоҳу анҳудан ривоят қилинган ҳадисга кўра, Аллоҳ таолонинг 99 та исмини номма-ном айтиб чиққан кишига қандай ваъда берилган?<\\/p>","variantlar":"{\\"A\\":\\"<p>У жаннатга кириши ҳақида ваъда берилган<\\\\/p>\\",\\"B\\":\\"<p>Унинг барча гуноҳлари кечирилиши айтилган<\\\\/p>\\",\\"C\\":\\"<p>У дунё ва охират саодатига эришиши айтилган<\\\\/p>\\"}","javob":"A"},{"id":"13472","lesson_id":"66","course_id":null,"savol":"<p>Ҳадиси шарифда баён қилинган «Аллоҳ таоло тоқдир, тоқни яхши кўради» жумласидаги «тоқ» сўзи қандай маънони англатади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Ибодатлар фақат тоқ саноқда қилиниши афзаллиги<\\\\/p>\\",\\"B\\":\\"<p>Аллоҳ шериги ва ўхшаши йўқ ягона зот эканини<\\\\/p>\\",\\"C\\":\\"<p>Аллоҳнинг исмлари фақат тоқ сонда келганлиги<\\\\/p>\\"}","javob":"B"},{"id":"13473","lesson_id":"66","course_id":null,"savol":"<p>Ҳужжатул Ислом Имом Ғаззолий Аллоҳ таолонинг тўқсон тўққизта исмини ўзининг қайси асарида алоҳида шарҳлаган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Ийҳо улумиддин асарида алоҳида шарҳлаган<\\\\/p>\\",\\"B\\":\\"<p>Қомусул муҳит китобида алоҳида шарҳлаган<\\\\/p>\\",\\"C\\":\\"<p>Мақсидул асна шарҳу асмаиллаҳил ҳусна асарида<\\\\/p>\\"}","javob":"C"},{"id":"13474","lesson_id":"66","course_id":null,"savol":"<p>Талаффуз қилинадиган сўзларнинг энг ёмони қайси амал ҳисобланади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Аллоҳ таолога ширк ва куфр сўзларни айтиш<\\\\/p>\\",\\"B\\":\\"<p>Мўмин кишини ноҳақ ғийбат қилиш ва сўкиш<\\\\/p>\\",\\"C\\":\\"<p>Одамлар орасида чақимчилик қилиб юриш<\\\\/p>\\"}","javob":"A"},{"id":"13475","lesson_id":"66","course_id":null,"savol":"<p>Сўфи Оллоҳёр бобомизнинг «Анинг зотиға ҳеч ким ақли етмас» мисраси қандай маънони ифодалайди?<\\/p>","variantlar":"{\\"A\\":\\"<p>Инсон ақли билан Қуръонни тўлиқ тушунмаслигини<\\\\/p>\\",\\"B\\":\\"<p>Мўмин банда Аллоҳ сифатлари ҳақиқатини билолмаслигини<\\\\/p>\\",\\"C\\":\\"<p>Ислом ҳукмларининг ҳикматига ақл етмаслигини<\\\\/p>\\"}","javob":"B"},{"id":"13476","lesson_id":"66","course_id":null,"savol":"<p>Исмлар ҳақидаги ҳадисда «Ал-Қуддус» исмининг маъноси қандай баён қилинган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Йўқдан бор қилгувчи зот маъносида<\\\\/p>\\",\\"B\\":\\"<p>Ризқ бериб тургувчи зот маъносида<\\\\/p>\\",\\"C\\":\\"<p>Мутлақ пок бўлган зот маъносида<\\\\/p>\\"}","javob":"C"},{"id":"13477","lesson_id":"66","course_id":null,"savol":"<p>Ҳадиси шарифда «Ас-Салам» исмининг таржимаси қандай берилган?<\\/p>","variantlar":"{\\"A\\":\\"<p>Тинчлик ато этувчи зот маъносида<\\\\/p>\\",\\"B\\":\\"<p>Назорат қилиб турувчи зот маъносида<\\\\/p>\\",\\"C\\":\\"<p>Ниҳоятда кечиримли зот маъносида<\\\\/p>\\"}","javob":"A"},{"id":"13478","lesson_id":"66","course_id":null,"savol":"<p>Ҳадиси шарифда баён қилинган Аллоҳнинг «Ал-Жаббар» исми қандай маънони англатади?<\\/p>","variantlar":"{\\"A\\":\\"<p>Энг улуғ ва юксак зот маъносини<\\\\/p>\\",\\"B\\":\\"<p>Энг қудратли бўлган зот маъносини<\\\\/p>\\",\\"C\\":\\"<p>Энг кучли бўлган зот маъносини<\\\\/p>\\"}","javob":"B"},{"id":"13479","lesson_id":"66","course_id":null,"savol":"<p>Аллоҳ таолонинг исмларидан «Ал-Муҳаймин» қандай маънога эга?<\\/p>","variantlar":"{\\"A\\":\\"<p>Иймон ато этувчи зот маъносига эга<\\\\/p>\\",\\"B\\":\\"<p>Махлуқотларга суврат берувчи маъносига эга<\\\\/p>\\",\\"C\\":\\"<p>Назорат қилувчи зот маъносига эга<\\\\/p>\\"}","javob":"C"},{"id":"13480","lesson_id":"66","course_id":null,"savol":"<p>Ҳадис шарҳига кўра, ким «Розиқ» исмини таниб маъносини англаса, унда қандай ҳолат вужудга келади?<\\/p>","variantlar":"{\\"A\\":\\"<p>У дунё молига муҳтож бўлмайди<\\\\/p>\\",\\"B\\":\\"<p>У ризқ масаласида хотиржам бўлади<\\\\/p>\\",\\"C\\":\\"<p>Унга ҳикмат берилади<\\\\/p>\\"}","javob":"B"},{"id":"13481","lesson_id":"66","course_id":null,"savol":"<p>Ақоид уламолари илоҳиёт бобидаги масалаларни асосан нечта асосга боғлаб тушунтирадилар?<\\/p>","variantlar":"{\\"A\\":\\"<p>Тўртта асосга боғлаб тушунтирадилар<\\\\/p>\\",\\"B\\":\\"<p>Учта асосга боғлаб тушунтирадилар<\\\\/p>\\",\\"C\\":\\"<p>Иккита асосга боғлаб тушунтирадилар<\\\\/p>\\"}","javob":"C"},{"id":"13482","lesson_id":"66","course_id":null,"savol":"<p>Баъзи уламолар Аллоҳнинг гўзал исмларини «номма-ном айтиб чиқиш» ҳақида неча хил маънони санаб ўтганлар?<\\/p>","variantlar":"{\\"A\\":\\"<p>Беш хил маъно бор деб санаб ўтганлар<\\\\/p>\\",\\"B\\":\\"<p>Уч хил маъно бор деб санаб ўтганлар<\\\\/p>\\",\\"C\\":\\"<p>Етти хил маъно бор деб санаб ўтганлар<\\\\/p>\\"}","javob":"A"}];<\/script>`;
+
+        // Event Listeners
+        window.addEventListener("DOMContentLoaded", () => {
+            const dropZone = document.getElementById("dropZone");
+            const fileInput = document.getElementById("fileInput");
+
+            dropZone.addEventListener("click", () => fileInput.click());
+
+            fileInput.addEventListener("change", (e) => {
+                if (e.target.files && e.target.files[0]) {
+                    handleFile(e.target.files[0]);
+                    fileInput.value = "";
+                }
+            });
+
+            dropZone.addEventListener("dragover", (e) => {
+                e.preventDefault();
+                dropZone.classList.add("drag-active");
+            });
+
+            dropZone.addEventListener("dragleave", () => {
+                dropZone.classList.remove("drag-active");
+            });
+
+            dropZone.addEventListener("drop", (e) => {
+                e.preventDefault();
+                dropZone.classList.remove("drag-active");
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    handleFile(e.dataTransfer.files[0]);
+                }
+            });
+
+            document.getElementById("parseCodeBtn").addEventListener("click", () => {
+                const code = document.getElementById("rawHtmlInput").value;
+                if (!code.trim()) {
+                    showAlert("error", "Matn kiritilmadi", "Iltimos, avval HTML kodni maydonga joylang.");
+                    return;
+                }
+                processHtmlContent(code, "kiritilgan_kod.html", true);
+            });
+
+            document.getElementById("loadSampleBtn").addEventListener("click", () => {
+                processHtmlContent(SAMPLE_HTML, "66-dars_testlari.html", false);
+            });
+
+            document.getElementById("downloadDocxBtn").addEventListener("click", generateAndDownloadDocx);
+            document.getElementById("downloadJsonBtn").addEventListener("click", downloadJsonFile);
+            document.getElementById("copyAllBtn").addEventListener("click", copyAllToClipboard);
+
+            document.getElementById("searchInput").addEventListener("input", renderQuestionsList);
+            document.getElementById("toggleShowAnswers").addEventListener("change", renderQuestionsList);
+        });
+    </script>
+
+</body></html>
