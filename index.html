@@ -430,7 +430,7 @@
                             children: [
                                 new TextRun({
                                     text: `${harf}) ${item.variantlar[harf]}`,
-                                    bold: isCorrect
+                                    bold: false
                                 })
                             ],
                             spacing: { after: 80 }
@@ -532,9 +532,10 @@
 
                 sortedKeys.forEach((harf) => {
                     const isCorrect = harf === item.togri_javob;
-                    const highlightClass = showAnswers && isCorrect
-                        ? "bg-emerald-50 border-emerald-300 text-slate-900 font-bold"
-                        : "bg-slate-50 border-slate-200/80 text-slate-700 font-normal";
+                    // Yangi holati:
+					const highlightClass = showAnswers && isCorrect
+    					? "bg-emerald-50 border-emerald-300 text-slate-900"
+    					: "bg-slate-50 border-slate-200/80 text-slate-700 font-normal";
 
                     const badgeClass = showAnswers && isCorrect
                         ? "bg-emerald-600 text-white"
